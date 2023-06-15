@@ -79,9 +79,12 @@ def func(s: Symptomclass):
             input.append(int(1))
         else:
             input.append(int(0))
-    data = pd.DataFrame([input], columns=symptomList)
-    return loaded_model.predict(data)
+    input = pd.DataFrame([input], columns=symptomList)
+    pred = disease[int(loaded_model.predict(input))]
+    return {
+        'disease': pred
+    }
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=3000)
+    uvicorn.run(app, host="0.0.0.0", port=3004)

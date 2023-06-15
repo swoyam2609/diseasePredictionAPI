@@ -6,7 +6,7 @@ This is a simple API that predicts the disease based on the symptoms provided by
 ## Usage
 The API is deployed on a virtual machine on Microsoft Azure. The API can be accessed using the following link: `https:/disease-prediction-api.swoyam.engineer`
 
-The API can be used by sending a POST request to the following endpoint: `https:/disease-prediction-api.swoyam.engineer/predict`
+The API can be used by sending a POST request to the following endpoint: `https://disease.swoyam.engineer/predict`
 
 ### Request Body
 The request body should be a JSON object with the following structure:

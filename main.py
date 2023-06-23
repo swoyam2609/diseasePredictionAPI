@@ -1,3 +1,4 @@
+from typing import List
 import uvicorn
 from pydantic import BaseModel
 from fastapi import FastAPI
@@ -65,7 +66,7 @@ disease = ['(vertigo) Paroymsal  Positional Vertigo', 'AIDS', 'Acne',
 
 
 class Symptomclass(BaseModel):
-    symptoms: list[str]
+    symptoms: List[str]
 
 
 app = FastAPI()
